@@ -1,11 +1,12 @@
-items = ARGV[0]
-i = 0
-if items < 0
+items = ARGV[0].to_i
+i = 1
+if items <= 0
     puts "El número debe ser mayor a 0"
 else
-    puts "<ul>\n\t<li>"
+    puts "<ul>"
     while i <= items
-        puts "#{i}</li>\n\t<li>"
+        print "\t<li> #{i} </li>\n"
         i += 1
     end
+    puts "</ul>"
 end
